@@ -29,8 +29,8 @@ function InitializeDrawing() {
     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.lookAt(scene.position);
 
-    var axisHelper = new THREE.AxisHelper(5);
-    scene.add(axisHelper);
+    //var axisHelper = new THREE.AxisHelper(5);
+    //scene.add(axisHelper);
 
     // LIGHT
     var light = new THREE.PointLight(0xffffff);
