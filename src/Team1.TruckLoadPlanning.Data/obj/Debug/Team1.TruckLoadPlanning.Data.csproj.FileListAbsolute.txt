@@ -1,0 +1,13 @@
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\bin\Team1.TruckLoadPlanning.Data.dll.config
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\bin\Team1.TruckLoadPlanning.Data.dll
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\bin\Team1.TruckLoadPlanning.Data.pdb
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\bin\EntityFramework.dll
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\bin\EntityFramework.SqlServer.dll
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\bin\EntityFramework.xml
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\bin\EntityFramework.SqlServer.xml
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.csprojResolveAssemblyReference.cache
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.csproj.CoreCompileInputs.cache
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.dll
+C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.pdb

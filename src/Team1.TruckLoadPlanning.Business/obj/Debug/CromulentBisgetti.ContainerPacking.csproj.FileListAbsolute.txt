@@ -1,0 +1,6 @@
+C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPacking-master\src\CromulentBisgetti.ContainerPacking\bin\Debug\CromulentBisgetti.dll.config
+C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPacking-master\src\CromulentBisgetti.ContainerPacking\bin\Debug\CromulentBisgetti.dll
+C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPacking-master\src\CromulentBisgetti.ContainerPacking\bin\Debug\CromulentBisgetti.pdb
+C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPacking-master\src\CromulentBisgetti.ContainerPacking\obj\Debug\CromulentBisgetti.ContainerPacking.csproj.CoreCompileInputs.cache
+C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPacking-master\src\CromulentBisgetti.ContainerPacking\obj\Debug\CromulentBisgetti.dll
+C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPacking-master\src\CromulentBisgetti.ContainerPacking\obj\Debug\CromulentBisgetti.pdb
