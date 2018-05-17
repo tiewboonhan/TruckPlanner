@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="CromulentBisgetti.DemoApp.MvcApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Team1.TruckLoadPlanning.Web.MvcApplication" Language="C#" %>

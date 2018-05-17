@@ -11,3 +11,16 @@ C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlan
 C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.csproj.CoreCompileInputs.cache
 C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.dll
 C:\Users\bootiew\Desktop\Hackathon@018\TruckLoadPlanning\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.pdb
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\bin\Team1.TruckLoadPlanning.Data.dll.config
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\bin\Team1.TruckLoadPlanning.Data.dll
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\bin\Team1.TruckLoadPlanning.Data.pdb
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\bin\EntityFramework.dll
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\bin\EntityFramework.SqlServer.dll
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\bin\EntityFramework.xml
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\bin\EntityFramework.SqlServer.xml
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.csprojResolveAssemblyReference.cache
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.csproj.CoreCompileInputs.cache
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.dll
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Data\obj\Debug\Team1.TruckLoadPlanning.Data.pdb

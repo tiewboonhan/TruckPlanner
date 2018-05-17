@@ -4,64 +4,121 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PlannerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Vehicles">
+    <Schema Namespace="PlannerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="OrderList">
           <Key>
-            <PropertyRef Name="VehicleId" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="VehicleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="VehicleNo" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Carrier" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Warehouse" Type="nvarchar" MaxLength="260" Nullable="false" />
-          <Property Name="VehicleType" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="Length" Type="float" Nullable="false" />
-          <Property Name="Width" Type="float" Nullable="false" />
-          <Property Name="Height" Type="float" Nullable="false" />
-          <Property Name="Volume" Type="float" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TNNo" Type="nvarchar" MaxLength="255" />
+          <Property Name="CaseNo" Type="nvarchar" MaxLength="255" />
+          <Property Name="CaseLength" Type="float" />
+          <Property Name="CaseWidth" Type="float" />
+          <Property Name="CaseHeight" Type="float" />
+          <Property Name="Volume" Type="float" />
+          <Property Name="Qty" Type="float" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="PackageMaterial" Type="nvarchar" MaxLength="255" />
+          <Property Name="Coordinate" Type="varchar" MaxLength="50" />
+          <Property Name="Dimension" Type="varchar" MaxLength="50" />
+          <Property Name="TruckType" Type="varchar" MaxLength="50" />
+          <Property Name="TruckNo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Planner.dbo.TruckSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TruckSummary">
+          <Key>
+            <PropertyRef Name="TruckType" />
+            <PropertyRef Name="TruckNo" />
+            <PropertyRef Name="OptimizationPrecentage" />
+          </Key>
+          <Property Name="TruckType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TruckNo" Type="int" Nullable="false" />
+          <Property Name="OptimizationPrecentage" Type="float" Nullable="false" />
+          <Property Name="Coordinate" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="PlannerModelStoreContainer">
-          <EntitySet Name="Vehicles" EntityType="Self.Vehicles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderList" EntityType="Self.OrderList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TruckSummary" EntityType="Self.TruckSummary" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TruckSummary].[TruckType] AS [TruckType], 
+    [TruckSummary].[TruckNo] AS [TruckNo], 
+    [TruckSummary].[OptimizationPrecentage] AS [OptimizationPrecentage], 
+    [TruckSummary].[Coordinate] AS [Coordinate]
+    FROM [dbo].[TruckSummary] AS [TruckSummary]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PlannerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Vehicle">
-          <Key>
-            <PropertyRef Name="VehicleId" />
-          </Key>
-          <Property Name="VehicleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="VehicleNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Carrier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Warehouse" Type="String" MaxLength="260" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="VehicleType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Length" Type="Double" Nullable="false" />
-          <Property Name="Width" Type="Double" Nullable="false" />
-          <Property Name="Height" Type="Double" Nullable="false" />
-          <Property Name="Volume" Type="Double" Nullable="false" />
-        </EntityType>
         <EntityContainer Name="PlannerEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Vehicles" EntityType="Self.Vehicle" />
+          <EntitySet Name="OrderLists" EntityType="PlannerModel.OrderList" />
+          <EntitySet Name="TruckSummaries" EntityType="PlannerModel.TruckSummary" />
         </EntityContainer>
+        <EntityType Name="OrderList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TNNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CaseNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CaseLength" Type="Double" />
+          <Property Name="CaseWidth" Type="Double" />
+          <Property Name="CaseHeight" Type="Double" />
+          <Property Name="Volume" Type="Double" />
+          <Property Name="Qty" Type="Double" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PackageMaterial" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Coordinate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TruckType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TruckNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Dimension" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TruckSummary">
+          <Key>
+            <PropertyRef Name="TruckType" />
+            <PropertyRef Name="TruckNo" />
+            <PropertyRef Name="OptimizationPrecentage" />
+          </Key>
+          <Property Name="TruckType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TruckNo" Type="Int32" Nullable="false" />
+          <Property Name="OptimizationPrecentage" Type="Double" Nullable="false" />
+          <Property Name="Coordinate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="PlannerModelStoreContainer" CdmEntityContainer="PlannerEntities">
-          <EntitySetMapping Name="Vehicles">
-            <EntityTypeMapping TypeName="PlannerModel.Vehicle">
-              <MappingFragment StoreEntitySet="Vehicles">
-                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
-                <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
-                <ScalarProperty Name="Carrier" ColumnName="Carrier" />
-                <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
-                <ScalarProperty Name="VehicleType" ColumnName="VehicleType" />
-                <ScalarProperty Name="Length" ColumnName="Length" />
-                <ScalarProperty Name="Width" ColumnName="Width" />
-                <ScalarProperty Name="Height" ColumnName="Height" />
+        <EntitySetMapping Name="OrderLists">
+            <EntityTypeMapping TypeName="PlannerModel.OrderList">
+              <MappingFragment StoreEntitySet="OrderList">
+                <ScalarProperty Name="Dimension" ColumnName="Dimension" />
+                <ScalarProperty Name="TruckNo" ColumnName="TruckNo" />
+                <ScalarProperty Name="TruckType" ColumnName="TruckType" />
+                <ScalarProperty Name="Coordinate" ColumnName="Coordinate" />
+                <ScalarProperty Name="PackageMaterial" ColumnName="PackageMaterial" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
                 <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="CaseHeight" ColumnName="CaseHeight" />
+                <ScalarProperty Name="CaseWidth" ColumnName="CaseWidth" />
+                <ScalarProperty Name="CaseLength" ColumnName="CaseLength" />
+                <ScalarProperty Name="CaseNo" ColumnName="CaseNo" />
+                <ScalarProperty Name="TNNo" ColumnName="TNNo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TruckSummaries">
+            <EntityTypeMapping TypeName="PlannerModel.TruckSummary">
+              <MappingFragment StoreEntitySet="TruckSummary">
+                <ScalarProperty Name="Coordinate" ColumnName="Coordinate" />
+                <ScalarProperty Name="OptimizationPrecentage" ColumnName="OptimizationPrecentage" />
+                <ScalarProperty Name="TruckNo" ColumnName="TruckNo" />
+                <ScalarProperty Name="TruckType" ColumnName="TruckType" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

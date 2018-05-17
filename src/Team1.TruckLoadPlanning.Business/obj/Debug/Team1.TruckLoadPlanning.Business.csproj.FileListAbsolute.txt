@@ -5,3 +5,10 @@ C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPack
 C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPacking-master\src\CromulentBisgetti.ContainerPacking\obj\Debug\Team1.TruckLoadPlanning.Business.csproj.CoreCompileInputs.cache
 C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPacking-master\src\CromulentBisgetti.ContainerPacking\obj\Debug\CromulentBisgetti.dll
 C:\Users\bootiew\Desktop\Hackathon@018\3DContainerPacking-master\3DContainerPacking-master\src\CromulentBisgetti.ContainerPacking\obj\Debug\CromulentBisgetti.pdb
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Business\bin\Debug\CromulentBisgetti.dll.config
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Business\bin\Debug\CromulentBisgetti.dll
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Business\bin\Debug\CromulentBisgetti.pdb
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Business\obj\Debug\Team1.TruckLoadPlanning.Business.csprojResolveAssemblyReference.cache
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Business\obj\Debug\Team1.TruckLoadPlanning.Business.csproj.CoreCompileInputs.cache
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Business\obj\Debug\CromulentBisgetti.dll
+C:\GitHub\TruckPlanner\src\Team1.TruckLoadPlanning.Business\obj\Debug\CromulentBisgetti.pdb

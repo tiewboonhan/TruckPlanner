@@ -25,6 +25,7 @@ namespace Team1.TruckLoadPlanning.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Vehicle> Vehicles { get; set; }
+        public virtual DbSet<OrderList> OrderLists { get; set; }
+        public virtual DbSet<TruckSummary> TruckSummaries { get; set; }
     }
 }
