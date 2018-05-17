@@ -1,0 +1,80 @@
+﻿@using Team1.TruckLoadPlanning.Web.Models
+@model CaseModel
+@{
+    ViewBag.Title = "Case";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    function SearchRecord() {
+        alert($('#txtCaseNo').val())
+        var data = { "CaseNo" : $('#txtCaseNo').val() }; 
+         $.ajax({
+             type: "POST",
+             url: window.makeUrl("/Order/SearchCase"),
+             data: data,
+             dataType: 'json',
+             async: true,
+             cache: false,
+             success: function (response) {
+                 $("#txtX").empty();
+                 $("#txtY").empty();
+                 $("#txtZ").empty();
+                 if (response == null) {
+                     alert ("Record No Found");
+                 }
+                 else {
+                    
+                     $("#txtX").html(response.Coordinate);
+                     $("#txtY").html(response.Coordinate);
+                     $("#txtZ").html(response.Coordinate);
+                 }
+                    
+             },
+            error: function (xhr, ajaxOptions, thrownError) {
+                 alert(xhr.status);
+             }
+         });
+
+     }
+
+</script>
+
+<div class="main">
+    <div class="container">
+        <h2>Case Tracker</h2>
+        <br />
+        <div class="row">
+            <div class="col-xs-1 col-md-1 col-lg-1">
+                Case No.
+            </div>
+            <div class="col-xs-2 col-md-2 col-lg-2 pull-left">
+                <input type="text" id="txtCaseNo" value="" />
+            </div>
+            <div class="col-xs-2 col-md-2 col-lg-2">
+                    <input type="button" id="btnSearch" class="btn btn-primary pull-left mt-1" value="Search" onclick="SearchRecord()" />
+            </div>
+        </div>
+         <div class="row"><br/></div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6 col-lg-6">
+                <table class="table table-striped table-bordered" style="padding: 15px;">
+                    <tbody>
+                        <tr class="tableRow">
+                            <td>Location X</td>
+                            <td id="txtX"></td>
+                        </tr>
+                        <tr class="tableRow">
+                            <td>Location Y</td>
+                            <td id="txtY"></td>
+                        </tr>
+                        <tr class="tableRow">
+                            <td>Location Z</td>
+                            <td id="txtZ"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+             
+    </div>
+</div>

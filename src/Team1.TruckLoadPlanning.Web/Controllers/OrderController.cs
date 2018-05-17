@@ -17,14 +17,28 @@ namespace Team1.TruckLoadPlanning.Web.Controllers
 
         public ActionResult Index()
         {
-
             List<OrderList> orders = orderRepo.GetOrderData();
             var model = new OrderModel(orders);
             return View(model); 
+        }
+
+
+        public ActionResult TrackCase()
+        {
+            var model = new CaseModel();
+            return View("Case", model);
 
         }
 
-       
+        [System.Web.Http.HttpPost]
+        public JsonResult SearchCase(string caseNo)
+        {
+            OrderList order = orderRepo.GetOrder(caseNo);
+            var model = new CaseModel(order);
+            //var ojb = model.Order == null ?? new {} : model.Order;
+            return Json(model.Order);
+
+        }
 
         [System.Web.Http.HttpPost]
         public JsonResult CollectResult()

@@ -16,5 +16,11 @@ namespace Team1.TruckLoadPlanning.Web.Repositories
             return order.ToList();
         }
 
+        public OrderList GetOrder(string caseNo)
+        {
+            var order = from i in _dbContext.OrderLists where i.CaseNo == caseNo select i;
+            return order.ToList().FirstOrDefault();
+        }
+
     }
 }

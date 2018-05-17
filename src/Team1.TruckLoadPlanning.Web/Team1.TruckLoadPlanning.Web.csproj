@@ -131,8 +131,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CaseModel.cs" />
     <Compile Include="Models\ContainerPackingRequest.cs" />
     <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\TruckModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\TruckRepository.cs" />
@@ -298,6 +300,7 @@
     </Content>
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Truck\Index.cshtml" />
+    <Content Include="Views\Order\Case.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

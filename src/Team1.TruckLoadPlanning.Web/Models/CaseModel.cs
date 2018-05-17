@@ -6,13 +6,19 @@ using Team1.TruckLoadPlanning.Data;
 
 namespace Team1.TruckLoadPlanning.Web.Models
 {
-    public class OrderModel
+    public class CaseModel
     {
-        public OrderModel(List<OrderList> orders)
+        public CaseModel()
         {
-            Orders = orders;  
         }
 
-        public List<OrderList> Orders { get; set; }
+
+        public CaseModel(OrderList order)
+        {
+            Order = order; 
+        }
+
+        public OrderList Order { get; set; }
+
     }
 }

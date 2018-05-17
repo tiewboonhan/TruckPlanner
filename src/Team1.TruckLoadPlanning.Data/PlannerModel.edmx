@@ -12,9 +12,9 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TNNo" Type="nvarchar" MaxLength="255" />
           <Property Name="CaseNo" Type="nvarchar" MaxLength="255" />
-          <Property Name="CaseLength" Type="float" />
-          <Property Name="CaseWidth" Type="float" />
-          <Property Name="CaseHeight" Type="float" />
+          <Property Name="CaseLength" Type="int" />
+          <Property Name="CaseWidth" Type="int" />
+          <Property Name="CaseHeight" Type="int" />
           <Property Name="Volume" Type="float" />
           <Property Name="Qty" Type="float" />
           <Property Name="Address" Type="nvarchar" MaxLength="255" />
@@ -63,9 +63,9 @@ warning 6002: The table/view 'Planner.dbo.TruckSummary' does not have a primary 
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TNNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="CaseNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="CaseLength" Type="Double" />
-          <Property Name="CaseWidth" Type="Double" />
-          <Property Name="CaseHeight" Type="Double" />
+          <Property Name="CaseLength" Type="Int32" />
+          <Property Name="CaseWidth" Type="Int32" />
+          <Property Name="CaseHeight" Type="Int32" />
           <Property Name="Volume" Type="Double" />
           <Property Name="Qty" Type="Double" />
           <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />

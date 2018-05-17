@@ -17,9 +17,9 @@ namespace Team1.TruckLoadPlanning.Data
         public int ID { get; set; }
         public string TNNo { get; set; }
         public string CaseNo { get; set; }
-        public Nullable<double> CaseLength { get; set; }
-        public Nullable<double> CaseWidth { get; set; }
-        public Nullable<double> CaseHeight { get; set; }
+        public Nullable<int> CaseLength { get; set; }
+        public Nullable<int> CaseWidth { get; set; }
+        public Nullable<int> CaseHeight { get; set; }
         public Nullable<double> Volume { get; set; }
         public Nullable<double> Qty { get; set; }
         public string Address { get; set; }

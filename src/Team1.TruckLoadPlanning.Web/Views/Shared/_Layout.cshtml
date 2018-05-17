@@ -106,15 +106,15 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li lass="active"><a href="@Url.Action("Index", "Order")">DN List</a></li>
-                        <li><a href="@Url.Action("Index", "Order")">Truck Summary</a></li>
-                        <li><a href="@Url.Action("Index", "Order")">Location Tracker</a></li>
+                        <li lass="active"><a href="@Url.Action("Index", "Order")">Delivery List</a></li>
+                        <li><a href="@Url.Action("Index", "Truck")">Truck Summary</a></li>
+                        <li><a href="@Url.Action("TrackCase", "Order")">Case Tracker</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default">Search</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" style="color: #fff;" class="nav-link dropdown-toggle" id="UserMenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -148,7 +148,7 @@
         </nav>
       
         </header>
-        <div class="bg-light border-bottom fixed-top naviBar">
+        @*<div class="bg-light border-bottom fixed-top naviBar">
 
             <div data-toggle="tooltip" data-placement="bottom" title="Undo" id="LastNavigationUrl" onclick="event.preventDefault(); window.history.go(-1);"
                  class="list-group-item list-group-item-action border-right h-100 naviItem pull-left">
@@ -158,7 +158,7 @@
                  class="list-group-item list-group-item-action border-right h-100 naviItem pull-left">
                 <i style="color: #000" class="fa fa-fw fa-undo"></i>
             </div>
-        </div>
+        </div>*@
 
         <div class="container-fluid">
             @*<div id="waitDialog" class="waitWindow">
@@ -173,7 +173,7 @@
             @RenderBody()
             @RenderSection("ScriptSection", required: false)
         </div>
-        <footer>
+        <footer class="bottom">
             @*<div class="toTop">
                 <span id="toTopIcon" class="fa fa-3x fa-angle-up"></span>
             </div>*@
