@@ -36,6 +36,9 @@ warning 6002: The table/view 'Planner.dbo.TruckSummary' does not have a primary 
           <Property Name="TruckNo" Type="int" Nullable="false" />
           <Property Name="OptimizationPrecentage" Type="float" Nullable="false" />
           <Property Name="Coordinate" Type="varchar" MaxLength="50" />
+          <Property Name="DimensionX" Type="int" />
+          <Property Name="DimensionY" Type="int" />
+          <Property Name="DimensionZ" Type="int" />
         </EntityType>
         <EntityContainer Name="PlannerModelStoreContainer">
           <EntitySet Name="OrderList" EntityType="Self.OrderList" Schema="dbo" store:Type="Tables" />
@@ -44,7 +47,10 @@ warning 6002: The table/view 'Planner.dbo.TruckSummary' does not have a primary 
     [TruckSummary].[TruckType] AS [TruckType], 
     [TruckSummary].[TruckNo] AS [TruckNo], 
     [TruckSummary].[OptimizationPrecentage] AS [OptimizationPrecentage], 
-    [TruckSummary].[Coordinate] AS [Coordinate]
+    [TruckSummary].[Coordinate] AS [Coordinate], 
+    [TruckSummary].[DimensionX] AS [DimensionX], 
+    [TruckSummary].[DimensionY] AS [DimensionY], 
+    [TruckSummary].[DimensionZ] AS [DimensionZ]
     FROM [dbo].[TruckSummary] AS [TruckSummary]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
@@ -85,6 +91,9 @@ warning 6002: The table/view 'Planner.dbo.TruckSummary' does not have a primary 
           <Property Name="TruckNo" Type="Int32" Nullable="false" />
           <Property Name="OptimizationPrecentage" Type="Double" Nullable="false" />
           <Property Name="Coordinate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DimensionX" Type="Int32" />
+          <Property Name="DimensionY" Type="Int32" />
+          <Property Name="DimensionZ" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -115,6 +124,9 @@ warning 6002: The table/view 'Planner.dbo.TruckSummary' does not have a primary 
           <EntitySetMapping Name="TruckSummaries">
             <EntityTypeMapping TypeName="PlannerModel.TruckSummary">
               <MappingFragment StoreEntitySet="TruckSummary">
+                <ScalarProperty Name="DimensionZ" ColumnName="DimensionZ" />
+                <ScalarProperty Name="DimensionY" ColumnName="DimensionY" />
+                <ScalarProperty Name="DimensionX" ColumnName="DimensionX" />
                 <ScalarProperty Name="Coordinate" ColumnName="Coordinate" />
                 <ScalarProperty Name="OptimizationPrecentage" ColumnName="OptimizationPrecentage" />
                 <ScalarProperty Name="TruckNo" ColumnName="TruckNo" />

@@ -18,5 +18,8 @@ namespace Team1.TruckLoadPlanning.Data
         public int TruckNo { get; set; }
         public double OptimizationPrecentage { get; set; }
         public string Coordinate { get; set; }
+        public Nullable<int> DimensionX { get; set; }
+        public Nullable<int> DimensionY { get; set; }
+        public Nullable<int> DimensionZ { get; set; }
     }
 }
